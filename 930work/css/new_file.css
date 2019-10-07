@@ -1,0 +1,117 @@
+/*清楚边距*/
+p,ul,dl,dd,ol,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a,i{
+	text-decoration: none;
+    font-style: normal;
+}
+/*中间背景图*/
+#zjtp{
+	height: 260px;
+	background-image: url(../img/dbj.jpg);
+	text-align: center;	
+}
+#zjtp-div{
+	height: 80px;
+	line-height: 210px;
+}
+.zjtp-h2{
+	font-size: 30px;
+	height: 54px;
+}
+.zjtp-ul{
+	height: 23px;
+}
+.zjtp-ul>li{
+	display: inline-block;
+	font-size: 16px;
+}
+.zjtp-ul>li:first-child>a{
+	color: #222222;
+}
+.zjtp-ul>li:last-child{
+	color: #ff5151;
+}
+/*3.主体*/
+#subject{
+	height: 100%;
+	padding: 90px 0;	
+}
+/*3.1主要内容*/
+#zynr{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+/*3.1.1左边主要内容*/
+#zynr-zb{
+	width: 300px;
+	float: left;
+}
+.zbzt{
+	width: 270px;
+	margin: 0 15px 0 15px;
+}
+.zbzt1{
+	height: 102px;
+	margin-bottom: 50px;
+}
+.zbzt2{
+	height: 159px;
+	margin-bottom: 55px;
+}
+.zbzt3{
+	height: 100%; 
+	margin-bottom: 30px;
+}
+.title{
+	font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+    color: #000000;
+}
+h3>a{
+    color: #000000;
+}
+.hx{
+    width: 50px;
+    height: 2px;
+    background-color: red;
+    overflow:hidden;
+    margin: -25px 0 25px 0;
+}
+.zbzt-ul{
+	list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.zbzt-ul>li{
+	display: block;
+    margin-bottom: 10px;
+}
+.zbzt-ul>li>a{
+	font-size: 15px;
+    display: block;
+    font-weight: 500;
+    color: #222222;
+}
+.zbzt-ul>li>a span{
+	float: right;
+	color: #222222;
+}
+
+/*3.1.2右边主要内容*/
+#zynr-yb{
+	width: 900px;
+	float: left;
+}
+.ybzt{
+	width: 870px;
+	margin: 0 15px 0 15px;
+}
