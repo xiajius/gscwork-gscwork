@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="in1" />
+		<button id="btn">签到</button>
+		<button id="btn2" >未签到</button>
+		<div id="mydiv"></div>
+		<script type="text/javascript">
+			var in1=document.getElementById('in1');
+			var btn=document.getElementById('btn');
+			var btn2=document.getElementById('btn2');
+			var mydiv=document.getElementById('mydiv');
+			var arr ='"赵1","钱2","孙3","李4", "王5","张6","高7"' ;
+			var arr2=[]
+			btn.onclick=function(){
+				arr2.push(in1.value);
+				in1.value="";
+				console.log(arr2);
+			}
+			btn2.onclick=function(){
+				var reg = new RegExp(arr2.join('|'),"ig");
+				var val = arr.replace(reg,"");
+				mydiv.innerHTML = '未签到人:' + val;
+			}
+		</script>
+	</body>
+</html>
