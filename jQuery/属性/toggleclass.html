@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+			}
+			.red{
+				background-color: red;
+			}
+			.blue{
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="red"></div>
+		<script type="text/javascript">
+			$("div").click(function(){
+				$(this).toggleClass('blue','red');
+			})
+		</script>
+	</body>
+</html>

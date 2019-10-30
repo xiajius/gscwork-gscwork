@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<div id="mydiv">
+			
+		</div>
+		<p class="abc"></p>
+		<img src="img/1.jpg"/>
+		<a href="http://www.baidu.com">baidu</a>
+		<script type="text/javascript">
+			//$("a").attr("href","http://www.taobao.com")
+			var ist=true;
+			$('img').click(function(){
+				$(this).attr('src',function(){
+					if(ist) {
+						ist=false;
+						return 'img/2.jpg';
+					}else {
+						ist=true;
+						return 'img/1.jpg';
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

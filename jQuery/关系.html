@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style type="text/css">
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	li{
+    		list-style: none;
+    	}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>123</li>
+        <li>456</li>
+        <li>789</li>
+    </ul>
+    <div>
+        <p>
+            <span>span</span>
+            <a href="">aaa</a>
+        </p>
+        <p>
+        	<a href="">bbb</a>
+            <i>subbianxiediansha</i>
+        </p>
+    </div>
+    <script>
+        $("div span+a").css({"color":"red"})
+        $("li:nth-child(2)").css({"color":"red"})
+    </script>
+</body>
+</html>

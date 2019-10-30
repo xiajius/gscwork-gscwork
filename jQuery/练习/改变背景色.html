@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery.min.js"></script>
+		<style type="text/css">
+			body{
+				background-color: #222;
+			}
+			div{
+				margin: 50px 0 20px 30px;
+				width: 70px;
+				height: 70px;
+				border-radius: 50px;
+				float: left;
+			}
+			#blue{
+				position: absolute;
+				z-index: 9999;
+			}
+			#orange{
+				position: absolute;
+				z-index: 8888;
+			}
+			#yellow{
+				position: absolute;
+				z-index: 7777;
+			}
+			#green{
+				position: absolute;
+				z-index: 6666;
+			}
+			#cyan{
+				position: absolute;
+				z-index: 5555;
+			}
+			#purple{
+				position: absolute;
+				z-index: 4444;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="blue" style="background-color: blue;"></div>
+		<div id="red" style="background-color: red;"></div>
+		<div id="orange" style="background-color: orange;"></div>
+		<div id="yellow" style="background-color: yellow;"></div>
+		<div id="green" style="background-color: green;"></div>
+		<div id="cyan" style="background-color: cyan;"></div>
+		<div id="purple" style="background-color: purple;"></div>
+		
+		<script type="text/javascript">
+			$("#blue").click(function(){
+				$('body').css({"background-Color":"#99ccff"});
+				$('div').css({"position":"static"});
+			});
+			$("#red").click(function(){
+				$('body').css({"background-Color":"#ff6666"});
+			});
+			$("#orange").click(function(){
+				$('body').css({"background-Color":"#ffcc33"});
+			});
+			$("#yellow").click(function(){
+				$('body').css({"background-Color":"#ffff99"});
+			});
+			$("#green").click(function(){
+				$('body').css({"background-Color":"#66cc00"});
+			});
+			$("#cyan").click(function(){
+				$('body').css({"background-Color":"#ccff99"});
+			});
+			$("#purple").click(function(){
+				$('body').css({"background-Color":"#9933ff"});				
+			});
+		</script>
+	</body>
+</html>
