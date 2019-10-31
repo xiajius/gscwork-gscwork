@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style type="text/css">
+    	td{
+    		width: 115px;
+    	}
+    </style>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+            <td>名称</td>
+            <td>数量</td>
+            <td>单价</td>
+            <td>合计</td>
+        </tr>
+        <tr>
+        	<td>
+        		<input id="hw20" type="checkbox">
+        		<span>华为mate20</span>
+        	</td>
+        	<td><input id="hwdj20" type="number" value="0" min="0"></td>
+        	<td>单价:<span id="dj1">3999</span></td>
+        	<td id="hj1"></td>
+        </tr>
+        <tr>
+        	<td>
+        		<input id="xm8" type="checkbox">
+        		<span>小米9</span>
+        	</td>
+        	<td><input id="dj2" type="number" value="0" min="0"></td>
+        	<td>单价:<span id="dj3">1899</span></td>
+        	<td id="hj2"></td>
+        </tr>
+        <tr>
+            <td>合计</td>
+            <td id="num"></td>
+            <td></td>
+            <td id="zj"></td>
+        </tr>
+    </table>
+    <script>
+        $('#hwdj20,#hw20').change(function(){
+            if($('#hw20').is(':checked') == true){
+                $('#hj1').html($('#hwdj20').val()*$('#dj1').html());
+            }else{
+                $('#hj1').html('')
+            }
+            
+        })
+        
+        $('#dj2,#xm8').change(function(){
+            if($('#xm8').is(':checked') == true){
+                $('#hj2').html($('#dj2').val()*$('#dj3').html());
+            }else{
+                $('#hj2').html('')
+            }
+        })
+        $('#hw20,#xm8,#hwdj20,#dj2').change(function(){
+            if($('#hw20').is(':checked') == true && $('#xm8').is(':checked') == true){
+                $('#num').html(parseInt($('#hwdj20').val())+parseInt($('#dj2').val()))
+                $('#zj').html(parseInt($('#hj1').html())+parseInt($('#hj2').html()))
+            }else if($('#hw20').is(':checked') == true){
+                $('#num').html(parseInt($('#hwdj20').val()))
+                $('#zj').html(parseInt($('#hj1').html()))
+            }else if($('#xm8').is(':checked') == true){
+                $('#num').html(parseInt($('#dj2').val()))
+                $('#zj').html(parseInt($('#hj2').html()))
+            }else{
+                $('#num').html('0')
+                $('#zj').html('0')
+            }
+        })
+    </script>
+</body>
+</html>
