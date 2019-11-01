@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="js/jquery.min.js"></script>
-    <style type="text/css">
-    	td{
-    		width: 115px;
-    	}
-    </style>
 </head>
 <body>
-    <table border="1px">
+    <table>
         <tr>
-            <td>名称</td>
+            <td>商品</td>
             <td>数量</td>
             <td>单价</td>
             <td>合计</td>
@@ -23,18 +18,18 @@
         		<input id="hw20" type="checkbox">
         		<span>华为mate20</span>
         	</td>
-        	<td><input id="hwdj20" type="number" value="0" min="0"></td>
-        	<td>单价:<span id="dj1">3999</span></td>
-        	<td id="hj1"></td>
+        	<td><input id="hwxmdj0" type="number" value="0" min="0"></td>
+        	<td>单价:<span id="hwdj">3999</span></td>
+        	<td id="hwhj"></td>
         </tr>
         <tr>
         	<td>
         		<input id="xm8" type="checkbox">
-        		<span>小米9</span>
+        		<span>小米8</span>
         	</td>
-        	<td><input id="dj2" type="number" value="0" min="0"></td>
-        	<td>单价:<span id="dj3">1899</span></td>
-        	<td id="hj2"></td>
+        	<td><input id="xmdj" type="number" value="0" min="0"></td>
+        	<td>单价:<span id="xmdj2">1899</span></td>
+        	<td id="xmhj"></td>
         </tr>
         <tr>
             <td>合计</td>
@@ -43,33 +38,35 @@
             <td id="zj"></td>
         </tr>
     </table>
-    <script>
-        $('#hwdj20,#hw20').change(function(){
+    <script type="text/javascript">
+    	//华为单间商品合计
+    	$('#hwxmdj0,#hw20').change(function(){
             if($('#hw20').is(':checked') == true){
-                $('#hj1').html($('#hwdj20').val()*$('#dj1').html());
+                $('#hwhj').html($('#hwxmdj0').val()*$('#hwdj').html());
             }else{
-                $('#hj1').html('')
+                $('#hwhj').html('')
             }
             
         })
-        
-        $('#dj2,#xm8').change(function(){
+        //小米单间商品合计
+        $('#xmdj,#xm8').change(function(){
             if($('#xm8').is(':checked') == true){
-                $('#hj2').html($('#dj2').val()*$('#dj3').html());
+                $('#xmhj').html($('#xmdj').val()*$('#xmdj2').html());
             }else{
-                $('#hj2').html('')
+                $('#xmhj').html('')
             }
         })
-        $('#hw20,#xm8,#hwdj20,#dj2').change(function(){
+        //最后总计
+        $('#hw20,#xm8,#hwxmdj0,#xmdj').change(function(){
             if($('#hw20').is(':checked') == true && $('#xm8').is(':checked') == true){
-                $('#num').html(parseInt($('#hwdj20').val())+parseInt($('#dj2').val()))
-                $('#zj').html(parseInt($('#hj1').html())+parseInt($('#hj2').html()))
+                $('#num').html(parseInt($('#hwxmdj0').val())+parseInt($('#xmdj').val()))
+                $('#zj').html(parseInt($('#hwhj').html())+parseInt($('#xmhj').html()))
             }else if($('#hw20').is(':checked') == true){
-                $('#num').html(parseInt($('#hwdj20').val()))
-                $('#zj').html(parseInt($('#hj1').html()))
+                $('#num').html(parseInt($('#hwxmdj0').val()))
+                $('#zj').html(parseInt($('#hwhj').html()))
             }else if($('#xm8').is(':checked') == true){
-                $('#num').html(parseInt($('#dj2').val()))
-                $('#zj').html(parseInt($('#hj2').html()))
+                $('#num').html(parseInt($('#xmdj').val()))
+                $('#zj').html(parseInt($('#xmhj').html()))
             }else{
                 $('#num').html('0')
                 $('#zj').html('0')
